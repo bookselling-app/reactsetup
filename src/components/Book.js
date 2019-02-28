@@ -6,6 +6,7 @@ const book = (props) => (
         <Text> {props.bookName} </Text>
     </View>
 );
+//ammar was here
 
 const styles = StyleSheet.create({
     book: {
