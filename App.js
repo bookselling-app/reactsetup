@@ -2,6 +2,8 @@ import React, { Component} from 'react';
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 
 import Book from './src/components/Book';
+import {ToastAndroid} from 'react-native';
+
 
 export default class App extends React.Component {
   state = {
@@ -11,6 +13,7 @@ export default class App extends React.Component {
 
 
   bookNameChangedHandler = val => {
+    ToastAndroid.show('RESPECTing women', ToastAndroid.SHORT)
     this.setState({
       bookName: val
     });
@@ -49,6 +52,8 @@ export default class App extends React.Component {
             style={styles.addBookButton}
             onPress={this.bookSubmitHandler}
           />        
+
+          <Text style = {styles.womenRespect}>Respect Women!</Text>
         </View>
         <View style={styles.listContainer}>{bookOutput}</View>
       </View>
@@ -57,6 +62,14 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+
+  womenRespect: 
+  {
+    width : 70%,
+    color: "red",
+    alignItems: "center",
+
+  },
   container: {
     flex: 1,
     padding: 26,
